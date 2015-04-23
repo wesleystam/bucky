@@ -5,6 +5,6 @@ module Buckaroo
   autoload :Constants, 'bucky/constants'
   autoload :Main,      'bucky/main'
   autoload :Config,    'bucky/config'
-  #autoload :Response,          'bucky/response'
-  #autoload :signature,         'bucky/signature'
+  autoload :Response,  'bucky/response'
+  autoload :Signature, 'bucky/signature'
 end
