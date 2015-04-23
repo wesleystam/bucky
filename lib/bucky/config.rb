@@ -13,11 +13,16 @@ module Buckaroo
       # in Buckaroo
       attr_accessor :websitekey
 
+      #The culture/locale in which the payment occurs
+      # Defaults to nl-NL. Other valid values are en-US, de-DE
+      attr_accessor :culture
+
       def defaults
         {
           endpoint: "https://checkout.buckaroo.nl/nvp/",
           secret: "",
-          websitekey: ""
+          websitekey: "",
+          culture: 'nl-NL',
         }
       end
 

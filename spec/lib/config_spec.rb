@@ -38,4 +38,16 @@ describe Buckaroo::Config do
       .to eq("very-secure")
   end
 
+  it "has a culture" do
+    Buckaroo::Config.configure(culture: "en-GB")
+    expect(Buckaroo::Config.culture)
+      .to eq("en-GB")
+  end
+
+  it "has a default culture" do
+    Buckaroo::Config.configure
+    expect(Buckaroo::Config.culture)
+      .to eq("nl-NL")
+  end
+
 end
