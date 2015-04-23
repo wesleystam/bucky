@@ -6,9 +6,18 @@ module Buckaroo
       # expects a string which is a valid url
       attr_accessor :endpoint
 
+      #The secret provided by Buckaroo
+      attr_accessor :secret
+
+      # the website key you generated on the configuration panel
+      # in Buckaroo
+      attr_accessor :websitekey
+
       def defaults
         {
-          endpoint: "https://checkout.buckaroo.nl/nvp/"
+          endpoint: "https://checkout.buckaroo.nl/nvp/",
+          secret: "",
+          websitekey: ""
         }
       end
 
