@@ -6,12 +6,12 @@ module Buckaroo
     end
 
     def post_payment
-      params_with_signature = client_options_with_defaults.merge(brq_signature: signature)
+      params_with_signature = transaction_parameters.merge(brq_signature: signature)
 
       HTTParty.post(Buckaroo::Config.endpoint, body: params_with_signature)
     end
 
-    def client_options_with_defaults
+    def transaction_parameters
       {
         brq_websitekey:     Buckaroo::Config.websitekey,
         brq_culture:        Buckaroo::Config.culture
