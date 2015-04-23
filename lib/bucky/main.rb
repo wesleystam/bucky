@@ -6,10 +6,20 @@ module Buckaroo
     end
 
     def post_payment
-      params_with_signature = transaction_parameters.merge(brq_signature: signature)
-
-      HTTParty.post(Buckaroo::Config.endpoint, body: params_with_signature)
+      HTTParty.post(Buckaroo::Config.endpoint,
+                    body: params_with_signature)
     end
+
+    def params_with_signature
+      transaction_parameters.merge(brq_signature: signature)
+    end
+
+    def self.successful_payment?(params)
+      code = params[:BRQ_STATUSCODE] || params[:brq_statuscode]
+      Constants::PAYMENT_STATUS_CODES[code] == 'Payment success'
+    end
+
+    private
 
     def transaction_parameters
       {
@@ -18,19 +28,13 @@ module Buckaroo
       }.merge(@brq_options)
     end
 
-    def self.successful_payment?(params)
-      code = params[:BRQ_STATUSCODE] || params[:brq_statuscode]
-      Constants::PAYMENT_STATUS_CODES[code] == 'Payment success'
-    end
 
     def endpoint
       Buckaroo::Config.endpoint
     end
 
-    private
-
     def signature
-      Buckaroo::Signature.new(client_options_with_defaults).to_s
+      Buckaroo::Signature.new(transaction_parameters).to_s
     end
 
   end
