@@ -1,3 +1,5 @@
+require 'active_support/hash_with_indifferent_access'
+
 module Buckaroo
   class Signature
     attr_accessor :body
