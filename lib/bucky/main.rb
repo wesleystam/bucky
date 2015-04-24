@@ -14,11 +14,6 @@ module Buckaroo
       transaction_parameters.merge(brq_signature: signature)
     end
 
-    def self.successful_payment?(params)
-      code = params["BRQ_STATUSCODE"] || params["brq_statuscode"]
-      Constants::PAYMENT_STATUS_CODES[code] == 'Payment success'
-    end
-
     private
 
     def transaction_parameters
