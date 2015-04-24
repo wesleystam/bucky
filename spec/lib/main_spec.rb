@@ -15,10 +15,10 @@ describe Buckaroo::Main do
   end
 
   describe "#set body" do
-    it "merges the body parameters given with the config ones" do
+    it "merges the given keys with the keys provided in the config" do
       main = Buckaroo::Main.new({brq_amount: 10.0})
-      expect(main.transaction_parameters.keys)
-        .to eq([:brq_websitekey, :brq_culture, :brq_amount])
+      expect(main.params_with_signature.keys)
+        .to eq([:brq_websitekey, :brq_culture, :brq_amount, :brq_signature])
     end
   end
 

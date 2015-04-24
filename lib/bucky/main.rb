@@ -1,8 +1,8 @@
 module Buckaroo
   class Main
 
-    def initialize(brq_options = {})
-      @brq_options = brq_options
+    def initialize(params = {})
+      @params = params
     end
 
     def post_payment
@@ -25,7 +25,7 @@ module Buckaroo
       {
         brq_websitekey:     Buckaroo::Config.websitekey,
         brq_culture:        Buckaroo::Config.culture
-      }.merge(@brq_options)
+      }.merge(@params)
     end
 
 
