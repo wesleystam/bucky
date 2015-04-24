@@ -15,7 +15,7 @@ module Buckaroo
     end
 
     def self.successful_payment?(params)
-      code = params[:BRQ_STATUSCODE] || params[:brq_statuscode]
+      code = params["BRQ_STATUSCODE"] || params["brq_statuscode"]
       Constants::PAYMENT_STATUS_CODES[code] == 'Payment success'
     end
 
