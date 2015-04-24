@@ -3,12 +3,14 @@ require "spec_helper"
 describe Buckaroo::PaymentResponse do
   describe "#successful_payment?" do
     it "returns true when the payment has status payment success" do
-      successful_payment = Buckaroo::PaymentResponse.successful_payment?(callback_success_response)
+      payment_response = Buckaroo::PaymentResponse.new(callback_success_response)
+      successful_payment = payment_response.successful_payment?
       expect(successful_payment).to eq(true)
     end
 
     it "returns false when the payment has a status other than success" do
-      failed_payment = Buckaroo::PaymentResponse.successful_payment?(callback_failure_response)
+      payment_response = Buckaroo::PaymentResponse.new(callback_failure_response)
+      failed_payment = payment_response.successful_payment?
       expect(failed_payment).to eq(false)
     end
 
