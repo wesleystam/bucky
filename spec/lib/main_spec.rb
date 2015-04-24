@@ -22,19 +22,4 @@ describe Buckaroo::Main do
     end
   end
 
-  def transaction_parameters
-    {
-      brq_amount:         10.0,
-      brq_currency:       'EUR',
-      brq_invoicenumber:  'invoice-number',
-      brq_description:    "description",
-      brq_return:         "return-url",
-      brq_returnreject:   "return-reject-url",
-      brq_returncancel:   "return-cancel-url",
-      brq_returnerror:    "return-error-url",
-      brq_continue_on_incomplete: "RedirectToHTML" #Or no to redirect to html
-    }
-  end
-
-
 end
