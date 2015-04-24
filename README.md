@@ -1,7 +1,8 @@
 # Bucky
 
+Bucky is intended to provide some default configuration for your Rails app when using Buckaroo as a Payment Provider. It currently only talks to the [NVP endpoint].
 
-Bucky is intended to provide some default configuration for your Rails app when using Buckaroo as a Payment Provider.
+[NVP endpoint]: http://support.buckaroo.nl/nl/index.php/NVP_Koppeling
 
 Bucky has opinionated defaults and is intended to be used with explicitness in mind.
 In stead of doing magic Bucky tries to take care of the hard parts and provide you with a clear API.
@@ -240,5 +241,5 @@ A big thanks to:
 * [Daniel Willemse]. For writing the initial implementation.
 * The [buckaroo-ideal] gem. I "borrowed" the configuration class. And peeked at some implementation details.
 
-[Daniel Willemse] https://github.com/danielwillemse
-[buckaroo-ideal] https://github.com/eet-nu/buckaroo-ideal
+[Daniel Willemse]: https://github.com/danielwillemse
+[buckaroo-ideal]: https://github.com/eet-nu/buckaroo-ideal
