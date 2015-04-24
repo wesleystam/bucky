@@ -238,8 +238,9 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 ### Thank you
 
 A big thanks to:
-* [Daniel Willemse]. For writing the initial implementation.
-* The [buckaroo-ideal] gem. I "borrowed" the configuration class. And peeked at some implementation details.
+[Daniel Willemse].For writing the initial implementation.
+
+The [buckaroo-ideal] gem. I "borrowed" the configuration class. And peeked at some implementation details.
 
 [Daniel Willemse]: https://github.com/danielwillemse
 [buckaroo-ideal]: https://github.com/eet-nu/buckaroo-ideal
