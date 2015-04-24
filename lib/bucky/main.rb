@@ -1,3 +1,5 @@
+require 'httparty'
+
 module Buckaroo
   class Main
 
@@ -5,9 +7,8 @@ module Buckaroo
       @params = params
     end
 
-    def post_payment
-      HTTParty.post(Buckaroo::Config.endpoint,
-                    body: params_with_signature)
+    def post_transaction_request
+      HTTParty.post(Buckaroo::Config.endpoint, body: params_with_signature)
     end
 
     def params_with_signature
