@@ -19,7 +19,7 @@ module Buckaroo
 
       def defaults
         {
-          endpoint: "https://checkout.buckaroo.nl/nvp/",
+          endpoint: "https://testcheckout.buckaroo.nl/nvp/",
           secret: "",
           websitekey: "",
           culture: 'nl-NL',
