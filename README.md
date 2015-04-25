@@ -35,7 +35,15 @@ Or install it yourself as:
 
 ## Usage
 
-### Setup
+
+TLDR;
+
+#### Generate a default setup
+
+Assuming you are calling your model `Transaction` you can run
+`rails generate bucky:install` and Bucky will try to generate the needed files and inject the routes.
+
+### Manual setup 
 
 Create an initializer in app/initializers/ which calls Buckaroo::Config.configure.
 Websitekey and Secret are two variables that need to be present.
