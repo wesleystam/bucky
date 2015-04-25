@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/bucky@2x.png)](http://badge.fury.io/rb/bucky)
+
 # Bucky
 
 Bucky is intended to provide some default configuration for your Rails app when using Buckaroo as a Payment Provider. It currently only talks to the [NVP endpoint].
@@ -43,7 +45,7 @@ TLDR;
 Assuming you are calling your model `Transaction` you can run
 `rails generate bucky:install` and Bucky will try to generate the needed files and inject the routes.
 
-### Manual setup 
+### Manual setup
 
 Create an initializer in app/initializers/ which calls Buckaroo::Config.configure.
 Websitekey and Secret are two variables that need to be present.
