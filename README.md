@@ -1,4 +1,6 @@
-[![Gem Version](https://badge.fury.io/rb/bucky@2x.png)](http://badge.fury.io/rb/bucky)
+[![Gem Version](https://badge.fury.io/rb/bucky.svg)](http://badge.fury.io/rb/bucky)
+
+[![Code Climate](https://codeclimate.com/github/sajoku/bucky/badges/gpa.svg)](https://codeclimate.com/github/sajoku/bucky)
 
 # Bucky
 
