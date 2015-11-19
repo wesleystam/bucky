@@ -8,7 +8,7 @@ module Buckaroo
     end
 
     def post_transaction_request
-      HTTParty.post(Buckaroo::Config.endpoint, body: params_with_signature)
+      HTTParty.post(endpoint, body: params_with_signature)
     end
 
     def params_with_signature
